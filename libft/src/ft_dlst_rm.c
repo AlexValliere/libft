@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dlst_new.c                                      :+:      :+:    :+:   */
+/*   ft_dlst_rm.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/01/02 02:07:59 by alexandre         #+#    #+#             */
-/*   Updated: 2014/01/03 00:26:04 by alexandre        ###   ########.fr       */
+/*   Created: 2014/01/02 23:59:29 by alexandre         #+#    #+#             */
+/*   Updated: 2014/01/03 00:29:45 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,18 @@
 #include <string.h>
 #include "../includes/libft.h"
 
-t_dlist	*ft_dlst_new(void)
+t_dlist	*ft_dlst_rm(t_dlist *dlist, void data)
 {
-	t_dlist	*new;
+	t_dlist	*temp;
+	int		found;
 
-	new = malloc(sizeof(new));
-	if (new != NULL)
+	if (dlist != NULL)
 	{
-		new->lenght = 0;
-		new->head = NULL;
-		new->tail = NULL;
+		temp = dlist->head;
+		found = 0;
+		while (temp != NULL && found == 0)
+		{
+			if (temp->data)
+		}
 	}
-	return (new);
 }

@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dlst_new.c                                      :+:      :+:    :+:   */
+/*   ft_dlst_len.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/01/02 02:07:59 by alexandre         #+#    #+#             */
-/*   Updated: 2014/01/03 00:26:04 by alexandre        ###   ########.fr       */
+/*   Created: 2014/01/03 00:22:45 by alexandre         #+#    #+#             */
+/*   Updated: 2014/01/03 00:43:29 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <string.h>
 #include "../includes/libft.h"
 
-t_dlist	*ft_dlst_new(void)
+size_t	ft_dlst_len(t_dlist *dlist)
 {
-	t_dlist	*new;
+	size_t	lenght;
 
-	new = malloc(sizeof(new));
-	if (new != NULL)
-	{
-		new->lenght = 0;
-		new->head = NULL;
-		new->tail = NULL;
-	}
-	return (new);
+	lenght = 0;
+	if (dlist != NULL)
+		lenght = dlist->lenght;
+	return (lenght);
 }

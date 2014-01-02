@@ -6,7 +6,7 @@
 #    By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/30 14:01:21 by apetit            #+#    #+#              #
-#    Updated: 2014/01/02 00:30:01 by alexandre        ###   ########.fr        #
+#    Updated: 2014/01/03 00:25:09 by alexandre        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,12 @@ NAME		= libft.a
 SRC			=	src/ft_abs.c \
 				src/ft_atoi.c \
 				src/ft_bzero.c \
+				src/ft_dlst_append.c \
+				src/ft_dlst_del.c \
+				src/ft_dlst_insert.c \
+				src/ft_dlst_len.c \
+				src/ft_dlst_new.c \
+				src/ft_dlst_prepend.c \
 				src/ft_is_int.c \
 				src/ft_isalnum.c \
 				src/ft_isalpha.c \

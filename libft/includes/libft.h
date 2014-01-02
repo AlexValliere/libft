@@ -6,7 +6,7 @@
 /*   By: alexandre <alexandre@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/30 14:01:21 by apetit            #+#    #+#             */
-/*   Updated: 2014/01/02 02:23:28 by alexandre        ###   ########.fr       */
+/*   Updated: 2014/01/03 00:43:34 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,16 @@ typedef struct		s_list
 {
 	void			*content;
 	size_t			content_size;
-	struct			s_list *next;
+	struct s_list	*next;
 }					t_list;
 
-struct				s_node
+typedef struct		s_node
 {
 	void			*data;
 	size_t			data_size;
-	struct			s_dlist *prev;
-	struct			s_dlist *next;
-};
+	struct s_node	*prev;
+	struct s_node	*next;
+}					t_node;
 
 typedef struct		s_dlist
 {
@@ -117,5 +117,11 @@ t_list	*ft_lstgetlast(t_list *lst);
 int		ft_printf(const char *format, ...);
 
 /* Doubly Linked List */
+t_dlist	*ft_dlst_new(void);
+t_dlist	*ft_dlst_append(t_dlist *dlist, void *data, size_t data_size);
+t_dlist	*ft_dlst_prepend(t_dlist *dlist, void *data, int data_size);
+t_dlist	*ft_dlst_insert(t_dlist *dlist, void *data, int data_size, int pos);
+void	ft_dlst_del(t_dlist **dlist);
+size_t	ft_dlst_len(t_dlist *dlist);
 
 #endif
